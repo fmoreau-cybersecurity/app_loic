@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const PORT = 20000;
 
 // Middleware
 app.use(cors());
@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Connexion à la base de données
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: '192.168.65.249',
     user: 'root',
     password: 'root',
     database: 'tournois_futsal'
@@ -44,5 +44,5 @@ app.get('/equipes', (req, res) => {
 
 // Démarrer le serveur
 app.listen(PORT, () => {
-    console.log(`Serveur en écoute sur http://localhost:${PORT}`);
+    console.log(`Serveur en écoute sur http://192.168.65.249:${PORT}`);
 });
