@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #4400fd;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header.dark-mode {
+    background: #1a1a1a;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a.dark-mode {
+    color: #e0e0e0;
+}
+
+.presentation {
+    margin: 20px 0;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style pour les sections avec animation de fondu */
+section {
+    background: rgb(199, 193, 193);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0; /* Commence avec une opacité de 0 */
+    transition: opacity 2s ease-out; /* Durée de la transition */
+}
+
+/* Style lorsque l'élément est visible */
+section.visible {
+    opacity: 1;
+    animation: fadeIn 2s ease-out; /* Durée de l'animation */
+}
+
+section.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #3106f5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #4908fc;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

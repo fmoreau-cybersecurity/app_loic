@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h5, h6, h7 {
+    text-align: center;
+    color: #004d99;
+  }
+  
+  #BTS\ Ciel, #BTS\ Eclec, #3ème\ PM, #2nd, #Bac\ pro {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+  }
+  
+  .fit-picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 8px;
+  }
+  
+  img {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  h7 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  h6 {
+    margin-top: 10px;
+  }
+  

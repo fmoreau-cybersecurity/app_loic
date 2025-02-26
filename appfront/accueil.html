@@ -1,0 +1,83 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fustal</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body> 
+    <header>
+        <div class="container">
+            <h1>Bienvenue sur le site pour le futsal de la Providence!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#Equipe">Equipe</a></li>
+                    <li><a href="#Classementetdéroulement">Classement et Déroulement</a></li>
+                    <li><a href="#calendrier">Calendrier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="presentation fade-in">
+            <h2>Bienvenue sur le site pour le fusal de La Providence </h2>
+            <p> Sur ce site il y aura tout pour le futsal de La Providence  <br>
+                
+              
+                
+                <b>Vous trouverez tout ce qu'il faut savoir sur chaque équipe qui participe au tournois du mercredi midi.</b><br>
+            </p>
+        </section>
+
+        <section id="Equipe" class="fade-in">
+            <h2><a href="Equipe.html"><u>Equipe</u></a></h2>
+            <p>A l'intérieur de cetter page vous trouverez le nom des équipes et les équide de foot qui les représente </p>
+            <ul>
+                <li>-Les équipes qui participent sont tous dans le lycée des métier </li>
+                <li>-De la 3ème prépa métier au BTS 2ème année </li>
+                <li>-Les équipes sont composées de 5 joueurs et 2 remplaçants </li>
+                <li>-Chaque équipe est représenter par une équipe qu'ils ont choisis ensemble</li>
+            </ul>
+        </section>
+
+        <section id="Classementetdéroulement" class="fade-in">
+            <h2><a href="classementetderoulement.html"><u>Classement et Déroulement</u></a></h2>
+            <p>Vous trouverez le classement mise a jour toutes les semaines et le déroulement des matchs.</p>
+            <ul>
+                <li>-Le classement est mise a jour chaque semaine par Loïc.</li>
+                <li>-Pour le déroulement des match chaque équipe de 5 joueur minimum </li>
+                <li>Chaque mercredi a 12h45 il faut être devant le gymnase et attendre Loic pour entrer et aller se changer </li>
+                <LI>-Chaque match dure 15 minutes et il y a 2 match par jour (aller et reour) </LI>
+                <li>-Chaque victoire vous raporte 3 pts, un nul raporte 1 pts et une defaite 0 pts</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionner tous les éléments avec la classe "fade-in"
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        // Fonction pour vérifier si l'élément est visible
+        function checkVisibility() {
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const viewHeight = Math.min(window.innerHeight, document.documentElement.clientHeight);
+                
+                if (!(rect.bottom < 0 || rect.top - viewHeight >= 0)) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Appel de la fonction au chargement de la page
+        checkVisibility();
+
+        // Appel de la fonction lors du défilement
+        window.addEventListener('scroll', checkVisibility);
+    });
+    </script>
+</body>
+</html>
