@@ -7,14 +7,38 @@
 </head>
 <body>
     <h2>Connexion</h2>
-    <form method="post">
-        <label for="identifiant">Identifiant :</label>
-        <input type="text" name="identifiant" required>
+    <form id="loginForm">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" required>
         <br>
         <label for="password">Mot de passe :</label>
-        <input type="password" name="password" required>
+        <input type="password" id="password" required>
         <br>
         <button type="submit">Se connecter</button>
     </form>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const response = await fetch("http://192.168.65.249:3000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                alert(data.message);
+                localStorage.setItem("token", data.token); // Stocker le token
+                window.location.href = "dashboard.html"; // Rediriger vers une page protégée
+            } else {
+                alert(data.error);
+            }
+        });
+    </script>
 </body>
 </html>

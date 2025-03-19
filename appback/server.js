@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 require('dotenv').config();  
-
+console.log("DB Config:", process.env.DB_HOST, process.env.DB_PORT);
 
 const app = express();
 
@@ -53,6 +53,8 @@ app.get('/equipes', (req, res) => {
 });
 
 // Démarrer le serveur
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Serveur en écoute sur http://192.168.65.249:${PORT}`);
 });
+            
